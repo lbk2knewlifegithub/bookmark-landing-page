@@ -1,0 +1,100 @@
+<!--desktop-->
+<nav [class.active]='active' class='desktop-nav'>
+  <div class='container flex-center-row'>
+    <!--    logo image-->
+    <div class='logo'>
+      <img src='/assets/images/logo-bookmark.svg' alt='Logo'>
+    </div>
+    <!--    end logo image-->
+
+    <!--    tail-->
+    <section class='tail flex-center-row'>
+      <!--    links-->
+      <ul class='flex-center-row'>
+        <li><a href='#'>FEATURES</a></li>
+        <li><a href='#'>PRICING</a></li>
+        <li><a href='#'>CONTACT</a></li>
+        <li class='login'>
+          <!--    login-->
+          <a class='btn btn-outline-danger' href='#'>Login</a>
+          <!--    end login-->
+        </li>
+      </ul>
+      <!--    end links-->
+
+    </section>
+    <!--    end tail-->
+
+  </div>
+</nav>
+<!--desktop-->
+
+
+<!--mobile nav normal-->
+<header [class.active]='active' class='mobile-nav-normal'>
+  <nav>
+    <div class='container flex-center-row'>
+      <!--    top nav-->
+      <div class='logo'>
+        <!--    logo image-->
+        <div class='cover'>
+          <img src='/assets/images/logo-bookmark.svg' alt='Logo'>
+        </div>
+        <!--    end logo image-->
+      </div>
+
+      <!--        hamburger or close icon-->
+      <img (click)='active = true' class='icon' src='/assets/images/icon-hamburger.svg' alt='Menu' />
+      <!--        end hamburger or close icon-->
+
+      <!--    end top nav-->
+    </div>
+  </nav>
+</header>
+<!--end mobile nav bar normal-->
+
+<!--mobile nav bar active-->
+<header *ngIf='active' class='mobile-nav-active'>
+  <div class='container'>
+    <!--    top nav-->
+    <nav class='flex-center-row'>
+      <div class='logo'>
+        <!--    logo image-->
+        <div class='cover'>
+          <img src='/assets/images/logo-bookmark.svg' alt='Logo'>
+        </div>
+        <!--    end logo image-->
+      </div>
+
+
+      <!--        close icon-->
+      <img (click)='active = false' class='icon' src='/assets/images/icon-close.svg' alt='Menu' />
+      <!--        end  close icon-->
+    </nav>
+    <!--    end top nav-->
+
+    <!--    links-->
+    <ul class='links flex-center-column'>
+      <li><a href='#'>FEATURES</a></li>
+      <li><a href='#'>PRICING</a></li>
+      <li><a href='#'>CONTACT</a></li>
+    </ul>
+    <!--    end links-->
+
+    <!--    login-->
+    <a class='login' href='#'>LOGIN</a>
+    <!--    end login-->
+
+    <!--    socials-->
+    <ul class='socials'>
+      <li>
+        <img src='/assets/images/icon-facebook.svg' alt='Facebook'>
+      </li>
+      <li>
+        <img src='/assets/images/icon-twitter.svg' alt='Twitter'>
+      </li>
+    </ul>
+    <!--    end socials-->
+  </div>
+</header>
+<!--end mobile nav bar active-->
