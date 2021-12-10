@@ -30,7 +30,7 @@ module.exports = {
     extend: {
       screens: {
         tablet: "768px",
-        desktop: "1024px",
+        desktop: "1280px",
       },
       // create custom fonts here
       fontFamily: {
@@ -41,17 +41,20 @@ module.exports = {
         fill: withOpacity("--text-fill"),
         muted: withOpacity("--text-muted"),
         inverted: withOpacity("--text-inverted"),
+        primary: withOpacity("--text-primary"),
+        danger: withOpacity("--text-danger"),
       },
       // create custom background colors here
       backgroundColor: {
         fill: withOpacity("--bg-fill"),
-        footer: withOpacity("--bg-footer"),
-        "button-accent": withOpacity("--bg-button-accent"),
-        "button-accent-hover": withOpacity("--bg-button-accent-hover"),
-        "button-muted": withOpacity("--bg-button-muted"),
+        'modal-box': withOpacity("--bg-modal-box"),
+        'primary': withOpacity("--bg-primary"),
+        'danger': withOpacity("--bg-danger"),
+        'footer': withOpacity("--bg-footer"),
       },
       borderColor: {
         danger: withOpacity("--border-danger"),
+        primary: withOpacity("--border-primary"),
       },
       // create custom gradient color here
       gradientColorStops: {
@@ -74,7 +77,7 @@ module.exports = {
         ".container": {
           maxWidth: "100%",
           "@screen desktop": {
-            maxWidth: "1024px",
+            maxWidth: "1280px",
           },
         },
       });

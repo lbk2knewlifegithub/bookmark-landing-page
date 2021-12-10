@@ -1,0 +1,41 @@
+<section class="py-16 bg-primary ">
+  <div class="container grid max-w-3xl gap-8 place-items-center text-inverted">
+    <div class="space-y-2 text-center">
+      <!--  already joined-->
+      <h3 class="font-bold tracking-widest">35,000 + ALREADY JOINED</h3>
+      <!--  end already joined-->
+
+      <!--  title-->
+      <h2 class="max-w-xl text-2xl font-bold tracking-widest desktop:text-4xl">
+        Stay up-to-date with what we're doing
+      </h2>
+      <!--  end title-->
+    </div>
+
+    <!--    email form-->
+    <form [formGroup]="form" (ngSubmit)="onSubmit($event)"
+      class="flex flex-col w-full gap-4 tablet:flex-row tablet:items-start">
+      <!--  email input-->
+      <div [class.error]="email.touched && email.errors" class="tablet:flex-grow ">
+        <input [formControl]="email" type="email" class="w-full p-4 rounded-md" placeholder="Enter you email addres" />
+
+        <p *ngIf="email.touched && email.errors?.['email']" class="italic font-bold text-white">
+          Whoops, make sure it's an email
+        </p>
+
+        <p *ngIf="email.touched && email.errors?.['required']" class="italic font-bold text-white">
+          Email is required
+        </p>
+      </div>
+      <!--  end email input-->
+
+      <!--  contact us link-->
+      <div>
+        <button type="submit" class="w-full btn btn-danger tablet:py-4 tablet:text-base" href="#">Contact Us</button>
+      </div>
+      <!--  end contact us link-->
+    </form>
+    <!-- end email form -->
+
+  </div>
+</section>

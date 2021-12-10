@@ -1,0 +1,7 @@
+.links-mobile {
+  @apply text-xl font-medium tracking-widest text-center text-inverted;
+
+  li {
+    @apply py-6 border-t-2  border-white/20;
+  }
+}

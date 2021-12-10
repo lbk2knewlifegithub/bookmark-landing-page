@@ -6,7 +6,7 @@ import { Extension, Feature, Question } from '../models';
 @Component({
   selector: 'lbk-home-page',
   template: `
-    <main>
+    <main class="overflow-hidden grid gap-44 tablet:gap-56 desktop:gap-44">
       <lbk-intro></lbk-intro>
 
       <lbk-features [features]="(features$ | async)!"></lbk-features>

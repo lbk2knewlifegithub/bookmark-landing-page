@@ -1,100 +1,67 @@
-<!--desktop-->
-<nav [class.active]='active' class='desktop-nav'>
-  <div class='container flex-center-row'>
-    <!--    logo image-->
-    <div class='logo'>
-      <img src='/assets/images/logo-bookmark.svg' alt='Logo'>
+<header *ngIf="!isActive">
+  <nav class="container flex items-center justify-between py-8">
+    <!-- logo -->
+    <div>
+      <img src="/assets/images/logo-bookmark.svg" alt="Logo">
     </div>
-    <!--    end logo image-->
+    <!-- end logo -->
 
-    <!--    tail-->
-    <section class='tail flex-center-row'>
-      <!--    links-->
-      <ul class='flex-center-row'>
-        <li><a href='#'>FEATURES</a></li>
-        <li><a href='#'>PRICING</a></li>
-        <li><a href='#'>CONTACT</a></li>
-        <li class='login'>
-          <!--    login-->
-          <a class='btn btn-outline-danger' href='#'>Login</a>
-          <!--    end login-->
-        </li>
-      </ul>
-      <!--    end links-->
+    <!-- links desktop-->
+    <ul class="items-center hidden gap-10 desktop:flex">
+      <li><a class="hover:text-danger" href="#">FEATURES</a></li>
+      <li><a class="hover:text-danger" href="#">PRICING</a></li>
+      <li><a class="hover:text-danger" href="#">CONTACT</a></li>
+      <li><a class="btn btn-danger" href="#">LOGIN</a></li>
+    </ul>
+    <!-- end links desktop-->
 
-    </section>
-    <!--    end tail-->
-
-  </div>
-</nav>
-<!--desktop-->
-
-
-<!--mobile nav normal-->
-<header [class.active]='active' class='mobile-nav-normal'>
-  <nav>
-    <div class='container flex-center-row'>
-      <!--    top nav-->
-      <div class='logo'>
-        <!--    logo image-->
-        <div class='cover'>
-          <img src='/assets/images/logo-bookmark.svg' alt='Logo'>
-        </div>
-        <!--    end logo image-->
-      </div>
-
-      <!--        hamburger or close icon-->
-      <img (click)='active = true' class='icon' src='/assets/images/icon-hamburger.svg' alt='Menu' />
-      <!--        end hamburger or close icon-->
-
-      <!--    end top nav-->
+    <!-- hamburger -->
+    <div (click)="isActive=true" class="cursor-pointer desktop:hidden">
+      <img src="/assets/images/icon-hamburger.svg" alt="Hamburger">
     </div>
+    <!-- end hamburger -->
   </nav>
 </header>
-<!--end mobile nav bar normal-->
 
-<!--mobile nav bar active-->
-<header *ngIf='active' class='mobile-nav-active'>
-  <div class='container'>
-    <!--    top nav-->
-    <nav class='flex-center-row'>
-      <div class='logo'>
-        <!--    logo image-->
-        <div class='cover'>
-          <img src='/assets/images/logo-bookmark.svg' alt='Logo'>
-        </div>
-        <!--    end logo image-->
+
+<!-- modal mobile nav active -->
+<header *ngIf="isActive" class="fixed top-0 left-0 z-50 w-full h-screen bg-modal-box/90">
+  <div class="container flex flex-col items-center">
+
+    <nav class="flex items-center justify-between w-full py-8 mt-">
+      <!-- logo -->
+      <div>
+        <img src="/assets/images/logo-bookmark-white.svg" alt="Logo">
       </div>
+      <!-- end logo -->
 
 
-      <!--        close icon-->
-      <img (click)='active = false' class='icon' src='/assets/images/icon-close.svg' alt='Menu' />
-      <!--        end  close icon-->
+      <!-- hamburger -->
+      <div (click)="isActive=false" class="cursor-pointer">
+        <img src="/assets/images/icon-close.svg" alt="Hamburger">
+      </div>
+      <!-- end hamburger -->
     </nav>
-    <!--    end top nav-->
 
-    <!--    links-->
-    <ul class='links flex-center-column'>
-      <li><a href='#'>FEATURES</a></li>
-      <li><a href='#'>PRICING</a></li>
-      <li><a href='#'>CONTACT</a></li>
+    <!-- links -->
+    <ul class="w-full max-w-lg mt-6 links-mobile">
+      <li><a class="hover:text-danger" href="#">FEATURES</a></li>
+      <li><a class="hover:text-danger" href="#">PRICING</a></li>
+      <li><a class="hover:text-danger" href="#">CONTACT</a></li>
+      <li><a class="w-full py-4 btn btn-outline !text-xl" href="#">LOGIN</a></li>
     </ul>
-    <!--    end links-->
+    <!-- end links -->
 
-    <!--    login-->
-    <a class='login' href='#'>LOGIN</a>
-    <!--    end login-->
-
-    <!--    socials-->
-    <ul class='socials'>
+    <!-- socials -->
+    <ul class="flex gap-10 mt-32 text-3xl text-white">
       <li>
-        <img src='/assets/images/icon-facebook.svg' alt='Facebook'>
+        <a class="hover:text-danger" href="#"><span class="fab fa-facebook-square"></span></a>
       </li>
       <li>
-        <img src='/assets/images/icon-twitter.svg' alt='Twitter'>
+        <a class="hover:text-danger" href="#"><span class="fab fa-twitter"></span></a>
       </li>
     </ul>
-    <!--    end socials-->
+    <!-- end socials -->
   </div>
 </header>
-<!--end mobile nav bar active-->
+<!-- modal mobile nav active -->

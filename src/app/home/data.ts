@@ -22,23 +22,23 @@ export const extensions: Extension[] = [
 
 export const questions: Question[] = [
   {
-    title: 'What is bookmark?',
-    content:
+    name: 'What is bookmark?',
+    answer:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa est id molestiae vitae! Esse minima natus officia sint soluta.',
   },
   {
-    title: 'How can I request a new browser?',
-    content:
+    name: 'How can I request a new browser?',
+    answer:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa est id molestiae vitae! Esse minima natus officia sint soluta.',
   },
   {
-    title: 'Is there a mobile app?',
-    content:
+    name: 'Is there a mobile app?',
+    answer:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa est id molestiae vitae! Esse minima natus officia sint soluta.',
   },
   {
-    title: 'What about other Chromium browser',
-    content:
+    name: 'What about other Chromium browser',
+    answer:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa est id molestiae vitae! Esse minima natus officia sint soluta.',
   },
 ];
